@@ -6,6 +6,8 @@ import Bouton from './Bouton'
 
 // il affiche Create new user car ds la LoginPage notre Login is true
 //  mais je mets false il yaura 'Login'
+// mais le islogin false ise il ya aura Login ds la page cette partie de false on
+// je mets ceci ds la LoginPage isLogin={false}
 
 export default function AuthContent({ isLogin }) {
     return (
