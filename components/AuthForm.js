@@ -8,6 +8,7 @@ import Input from './Input'
 export default function AuthForm({ isLogin }) {
 
     const [enteredEmail, setEnteredEmail] = useState('')
+    const [enteredPassword, setEnteredPassword] = useState('')
 
     function updateInput(inputType, enteredValue) {
 
@@ -15,13 +16,25 @@ export default function AuthForm({ isLogin }) {
             case 'email':
                 setEnteredEmail(enteredValue)
                 break;
+
+
+            case 'password':
+                setEnteredPassword(enteredValue)
+                break;
         }
 
     }
     return (
         <View>
             <Input label="Email" keyboardType="Email-adress"
-                onUpdateValue={updateInput.bind(this, 'email')} />
+                onUpdateValue={updateInput.bind(this, 'email')}
+                value={enteredEmail}
+            />
+            <Input label="Sifre"
+                secure
+                onUpdateValue={updateInput.bind(this, 'password')}
+                value={enteredPassword}
+            />
         </View>
     )
 }
