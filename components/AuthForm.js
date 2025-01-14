@@ -15,6 +15,14 @@ export default function AuthForm({ isLogin, onsubmit, credentialsInValid }) {
     const [confirmPassword, setConfirmPassword] = useState('')
 
     console.log(credentialsInValid);
+    const {
+        email: emailIsInValid,
+        mail: emailsDontMatch,
+        password: passwordIsInValid,
+        sifre: passwordDontMatch,
+    } = credentialsInValid;
+    console.log(emailIsInValid, emailsDontMatch, passwordIsInValid, passwordDontMatch);
+
 
     function submitHandler() {
         onsubmit({
@@ -53,23 +61,27 @@ export default function AuthForm({ isLogin, onsubmit, credentialsInValid }) {
             <Input label="Email" keyboardType="Email-adress"
                 onUpdateValue={updateInput.bind(this, 'email')}
                 value={enteredEmail}
+                isInvalid={emailIsInValid}
             />
             {!isLogin && (
                 <Input label="Email Dogrula" keyboardType="Email-adress"
                     onUpdateValue={updateInput.bind(this, 'mail')}
                     value={confirmEmail}
+                    isInvalid={emailsDontMatch}
                 />
             )}
             <Input label="Sifre"
                 secure
                 onUpdateValue={updateInput.bind(this, 'password')}
                 value={enteredPassword}
+                isInvalid={passwordIsInValid}
             />
             {!isLogin && (
                 <Input label="Sifre Dogrula"
                     secure
                     onUpdateValue={updateInput.bind(this, 'sifre')}
                     value={confirmPassword}
+                    isInvalid={passwordDontMatch}
                 />
             )}
             <Buttonlar onPress={submitHandler}>
