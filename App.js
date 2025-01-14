@@ -9,15 +9,21 @@ import SignUp from './screens/SignUp';
 const Stack = createNativeStackNavigator();
 
 // burda c'est after authentification
+//headerStyle pour la couleur de l'entete et headerTintColor pr 
+//la color de l'ecriture
 function NormalStack() {
   return (
-    <Stack.Navigator>
-      <Stack.Screen name="Login" component={LoginPage} />
-      <Stack.Screen name="SignUp" component={SignUp} />
+    <Stack.Navigator screenOptions={{
+      headerStyle:
+        { backgroundColor: 'gray' }, headerTintColor: 'white'
+    }}>
+      <Stack.Screen name="Login" component={LoginPage} options={{ headerTitle: 'User Login' }} />
+      <Stack.Screen name="SignUp" component={SignUp} options={{ headerTitle: 'User Registration' }} />
     </Stack.Navigator>
   )
 }
-
+// j'ai utilise ooptions={headerTitle} pour changer le nom de la Page 
+// A la place de LOGIN j'ai mit User LOgin
 export default function App() {
   return (
 

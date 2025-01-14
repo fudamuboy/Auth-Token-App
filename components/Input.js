@@ -22,10 +22,10 @@ const styles = StyleSheet.create({
     label: {
         color: 'white',
         fontSize: 16,
-        margin: 10,
+        margin: 5,
     },
     input: {
-        backgroundColor: 'pink',
+        backgroundColor: 'white',
         paddingVertical: 8,
         paddingHorizontal: 15,
         borderRadius: 20,
