@@ -23,15 +23,12 @@ export default function AuthForm({ isLogin, onsubmit, credentialsInValid }) {
     } = credentialsInValid;
     console.log(emailIsInValid, emailsDontMatch, passwordIsInValid, passwordDontMatch);
 
-
     function submitHandler() {
         onsubmit({
             email: enteredEmail,
             mail: confirmEmail,
             password: enteredPassword,
             sifre: confirmPassword
-
-
         })
     }
 

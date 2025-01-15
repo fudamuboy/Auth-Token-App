@@ -10,7 +10,7 @@ useNavigation
 //  mais je mets false il yaura 'Login'
 // Si isLogin = true : Affiche "Create new user".
 //Sinon : Affiche "Login Up".
-export default function AuthContent({ isLogin }) {
+export default function AuthContent({ isLogin, onAuthenticate }) {
 
     const [credentialsInValid, setCredentialsInValid] = useState({
         email: false,
@@ -46,6 +46,8 @@ export default function AuthContent({ isLogin }) {
             })
             return
         }
+
+        onAuthenticate({ email, password })
     }
 
     // bu kisminda sayfa arasinda gecis sagliyor
