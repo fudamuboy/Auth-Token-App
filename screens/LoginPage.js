@@ -1,19 +1,22 @@
 import { StyleSheet, Text, View, Alert } from 'react-native'
-import React, { useState } from 'react'
+import React, { useState, useContext } from 'react'
 import AuthContent from '../components/AuthContent'
 import Loading from '../components/Loading'
 import { login } from '../util/auth'
+import { AuthContext } from '../store/auth-context'
 
 // A tarvers ce props on a cree une liasion entre les pages et le LoginPage
 // isLogin est true ici 
 export default function LoginPage() {
     const [isAuthenticating, setIsAuthenticating] = useState(false)
+    const authContext = useContext(AuthContext);
 
     async function LoginHandler({ email, password }) {
         setIsAuthenticating(true) // Affiche le chargement
         try {
             // Appelle l'API pour créer l'utilisateur
-            await login(email, password)
+            const token = await login(email, password)
+            authContext.authenticate(token)
         } catch (error) {
             // Gérez les erreurs ici (par exemple, afficher une alerte)
 

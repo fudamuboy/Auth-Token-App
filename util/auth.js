@@ -12,14 +12,16 @@ async function authenticate(mode, email, password) {
       }
     );
   
-    console.log(response.data);
+    //console.log(response.data);
+    const token=response.data.idToken;
+    return token;
   }
   
-  export async function createUser(email, password) {
+  export  function createUser(email, password) {
     return authenticate('signUp', email, password);
   }
   
-  export async function login(email, password) {
+  export  function login(email, password) {
     return authenticate('signInWithPassword', email, password);
   }
   // ds cette partie j'ai cree 2 functions ds lakel j'ai utlise en mm temps le SignUp n le SignIn
