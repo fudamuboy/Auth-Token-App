@@ -4,7 +4,7 @@ Proje Adı: React Native Authentication App
 Proje Açıklaması
 
 Bu proje, React Native kullanılarak geliştirilmiş bir mobil uygulamadır. Kullanıcıların kayıt olmasını, giriş yapmasını ve oturumlarının yönetilmesini sağlar. Uygulama, kullanıcı oturumlarını context API, Firebase Authentication ve AsyncStorage ile yönetir, bu sayede kullanıcı deneyimi geliştirilir.
-Özellikler
+<p>Özellikler 📋</p>
 
     Kayıt ve Giriş İşlemleri: Kullanıcılar Firebase Authentication kullanılarak kayıt olabilir ve giriş yapabilir.
     Token Tabanlı Oturum Yönetimi: Kullanıcı oturumu bir token ile yönetilir ve bu token AsyncStorage'da saklanır.
@@ -25,10 +25,6 @@ Firebase Özellikleri
 
 Firebase Authentication, kullanıcıların kayıt ve giriş işlemleri sırasında güvenli bir şekilde doğrulanmasını sağlamak için kullanıldı. Kullanıcı e-postaları, UID'leri ve diğer oturum detayları Firebase konsolunda görüntülenebilir.
 Kurulum ve Çalıştırma
-
-    Projeyi klonlayın:
-
-git clone https://github.com/kullanici-adi/react-native-authentication-app.git
 
 Gerekli bağımlılıkları yükleyin:
 
