@@ -45,3 +45,7 @@ function AuthContextProvider({ children }) {
 }
 
 export default AuthContextProvider;
+// Ceci est le contexte d'authentification et le gestion d'etat a travers le AsyncStorage
+// et le Token, il ya aussi le useEffect avec le fetchToken et plusieurs fonctions
+// une de d'identifier le use en eneregistrant les infos ,une pr deconnecter par suppresion
+// et une fournissant les donnees du contexte a ses children et le useEffect pr le stockage des donnees 

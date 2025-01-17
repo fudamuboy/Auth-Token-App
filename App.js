@@ -39,7 +39,7 @@ function NormalStack() {
   );
 }
 
-// AfterAuthenticated: Oturum açıldıktan sonra kullanılan navigasyon
+// AfterAuthenticatedStack: Oturum açıldıktan sonra kullanılan navigasyon
 function AfterAuthenticatedStack() {
   const authContext = useContext(AuthContext)
   return (
@@ -63,6 +63,8 @@ function AfterAuthenticatedStack() {
     </Stack.Navigator>
   );
 }
+// Ds cette condition si aisAuthenticated est false alors le NormalStack 
+// Et l'autre isAuthenticated est true alors le AfterAuthenticatedStack
 function Navigation() {
   const authContext = useContext(AuthContext)
   return (
