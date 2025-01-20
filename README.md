@@ -33,11 +33,13 @@ npm install
 Firebase projesini oluşturun ve Firebase Configuration bilgilerini ekleyin.
 Projeyi çalıştırın:
 
-    npm start
+    npm expo start 
 
 Ekran Görselleri
+![Image](https://github.com/user-attachments/assets/e3d81731-509d-4309-8914-7bbadaf9efb6)
 
-   
+FIREBASE GORUNTU
+![Image](https://github.com/user-attachments/assets/00072ea7-e800-4943-9b43-6831b9d35505)   
 
 Geliştirici Notu
 
